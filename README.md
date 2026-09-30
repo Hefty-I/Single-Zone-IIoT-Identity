@@ -107,10 +107,8 @@ All three students should speak and be able to explain what check causes each re
 
 ## Team contributions
 
-Fill in actual names and work before submission. Git commits and demonstration participation should match the table.
-
 | Student | Components and files | Tests demonstrated |
 | --- | --- | --- |
-| Muhammad Hassaan Siddiqui | [Actual contributions] | [Tests] |
-| Muhammad Huzaifa | [Actual contributions] | [Tests] |
-| Irbaz | [Actual contributions] | [Tests] |
+| Muhammad Hassaan Siddiqui | Device onboarding and protected connection: step1_identity.py, protected_connection.py; benchmark: performance.py | ive devices connected over TLS; wrong PSK denied; ECC proof passed; valid sensor WRITE and motor STOP allowed |
+| Muhammad Huzaifa | Merkle batch, root registry, and signed access: batch.py, registry.py, access.py, signed_access.py | Five inclusion proofs passed; changed DID denied; replayed request and copied proof denied |
+| Irbaz | Temporary tokens and revocation: temporary_token.py, revocation.py; performance results in results/ | Stolen, changed, expired, and revoked tokens denied; revoked device excluded from the next epoch; CSV and graphs produced |
