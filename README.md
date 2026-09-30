@@ -46,7 +46,7 @@ You can rerun the demonstrations. Each completed batch receives a new epoch numb
 
 | File | Purpose |
 | --- | --- |
-| `step1_identity.py` | Device DID and ECC key generation; PSK check and fresh ECC challenge. |
+| `identity.py` | Device DID and ECC key generation; PSK check and fresh ECC challenge. |
 | `batch.py` | Deterministically sort leaves, make one Merkle root, create and verify inclusion proofs. |
 | `registry.py` | Save roots and device proofs by epoch. Old roots remain available. |
 | `access.py` | Check Merkle membership, trusted fog role, revocation, and resource permission. |
