@@ -9,6 +9,8 @@ from copy import deepcopy
 
 from registry import PROOFS_FILE, ROOTS_FILE, read_json, verify_saved_package
 
+REVOKED_FILE = ROOTS_FILE.with_name("revoked.json")
+
 
 # These roles belong to the fog's trusted provisioning records. The device
 # cannot gain a new role by putting a different role in its request.
@@ -50,10 +52,12 @@ def decide(request: dict, resource: str, operation: str,
                        None)
         if trusted is None:
             return "DENY", "no trusted device record"
+        if trusted["device_id"] in read_json(REVOKED_FILE).get("device_ids", []):
+            return "DENY", "device revoked"
     except (KeyError, TypeError, ValueError):
         return "DENY", "malformed identity or proof"
 
-    role = TRUSTED_ROLES.get(trusted["device_id"])
+    role = trusted.get("role", TRUSTED_ROLES.get(trusted["device_id"]))
     if role is None:
         return "DENY", "no trusted role"
     if (resource, operation) not in POLICY.get(role, set()):
