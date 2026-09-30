@@ -111,6 +111,6 @@ Fill in actual names and work before submission. Git commits and demonstration p
 
 | Student | Components and files | Tests demonstrated |
 | --- | --- | --- |
-| [Name 1] | [Actual contributions] | [Tests] |
-| [Name 2] | [Actual contributions] | [Tests] |
-| [Name 3] | [Actual contributions] | [Tests] |
+| Muhammad Hassaan Siddiqui | [Actual contributions] | [Tests] |
+| Muhammad Huzaifa | [Actual contributions] | [Tests] |
+| Irbaz | [Actual contributions] | [Tests] |
